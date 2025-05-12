@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(far.cert.plugin LANGUAGES C)
+project(far-cert LANGUAGES C)
 
 include(ExternalProject)
 

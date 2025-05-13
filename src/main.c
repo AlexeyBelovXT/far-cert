@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "openssl/x509.h"
-#include "plugin.hpp"
+#include "far/plugin.hpp"
 
 int main()
 {

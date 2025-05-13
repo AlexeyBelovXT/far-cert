@@ -11,6 +11,8 @@ if (NOT OPENSSL_SOURCE_DIR)
 message(FATAL_ERROR "OPENSSL_SOURCE_DIR is not defined")
 endif()
 
+set(OPENSSL_TMP_DIR ${CMAKE_BINARY_DIR}/openssl-ep-tmp)
+set(OPENSSL_STAMP_DIR ${CMAKE_BINARY_DIR}/openssl-ep-stamp)
 set(OPENSSL_BINARY_DIR ${CMAKE_BINARY_DIR}/openssl-ep-build)
 set(OPENSSL_INSTALL_DIR ${CMAKE_BINARY_DIR}/openssl)
 set(OPENSSL_CONFIGURE_ARGS --prefix=${OPENSSL_INSTALL_DIR} --openssldir=${OPENSSL_INSTALL_DIR} no-apps no-tests no-shared no-docs)
@@ -42,6 +44,8 @@ endif()
 # OPENSSL
 ExternalProject_Add(
     openssl-ep
+    TMP_DIR ${OPENSSL_TMP_DIR}
+    STAMP_DIR ${OPENSSL_STAMP_DIR}
     SOURCE_DIR ${OPENSSL_SOURCE_DIR}
     BINARY_DIR ${OPENSSL_BINARY_DIR}
     INSTALL_DIR ${OPENSSL_INSTALL_DIR}

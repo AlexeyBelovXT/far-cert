@@ -20,19 +20,9 @@ SET(src
 
 add_library(${CMAKE_PROJECT_NAME} MODULE ${src})
 
-add_dependencies(${CMAKE_PROJECT_NAME}
-    openssl
-    far
-)
-
-target_include_directories(${CMAKE_PROJECT_NAME}
-    PRIVATE openssl
-    PRIVATE far
-)
-
 target_link_libraries(${CMAKE_PROJECT_NAME}
     openssl
+    far
     Ws2_32.lib
     Crypt32.lib
 )
-

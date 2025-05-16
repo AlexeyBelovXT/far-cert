@@ -11,12 +11,23 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             }
+        },
+        {
+            "name": "x64-Release",
+            "binaryDir": "${sourceDir}/.out/x64-release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
         }
     ],
     "buildPresets": [
         {
             "name": "x64-Debug",
             "configurePreset": "x64-Debug"
+        },
+        {
+            "name": "x64-Release",
+            "configurePreset": "x64-Release"
         }
     ]
 }

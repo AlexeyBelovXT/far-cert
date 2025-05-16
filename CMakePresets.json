@@ -1,0 +1,22 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25
+    },
+    "configurePresets": [
+        {
+            "name": "x64-Debug",
+            "binaryDir": "${sourceDir}/.out/x64-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "x64-Debug",
+            "configurePreset": "x64-Debug"
+        }
+    ]
+}

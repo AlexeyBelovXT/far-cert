@@ -8,7 +8,7 @@ if ((NOT CMAKE_BUILD_TYPE STREQUAL "Debug") AND (NOT CMAKE_BUILD_TYPE STREQUAL "
 endif ()
 
 if (NOT OPENSSL_SOURCE_DIR)
-message(FATAL_ERROR "OPENSSL_SOURCE_DIR is not defined")
+    message(FATAL_ERROR "OPENSSL_SOURCE_DIR is not defined")
 endif()
 
 set(OPENSSL_TMP_DIR ${CMAKE_BINARY_DIR}/openssl-ep-tmp)

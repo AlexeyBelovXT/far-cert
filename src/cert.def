@@ -1,0 +1,7 @@
+LIBRARY CERT
+EXPORTS
+OpenW
+ExitFARW
+GetPluginInfoW
+GetGlobalInfoW
+SetStartupInfoW

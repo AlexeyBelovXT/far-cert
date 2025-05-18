@@ -11,10 +11,10 @@ endif ()
 
 # openssl
 set(OPENSSL_SOURCE_DIR ${CMAKE_SOURCE_DIR}/deps/openssl)
-add_subdirectory(cmake/openssl)
+add_subdirectory(cmake/openssl ${CMAKE_BINARY_DIR}/openssl)
 
 # far
-add_subdirectory(cmake/far)
+add_subdirectory(cmake/far ${CMAKE_BINARY_DIR}/far)
 
 SET(src
     src/main.c
